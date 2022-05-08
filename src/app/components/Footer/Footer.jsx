@@ -47,15 +47,15 @@ const Footer = () => {
             >
                 <AppFooter>
                     <FooterContent>
-                        <a href="https://ui-lib.com/downloads/matx-pro-react-admin/">
+                        {/* <a href="https://ui-lib.com/downloads/matx-pro-react-admin/">
                             <Button variant="contained" color="secondary">
                                 Get MatX Pro
                             </Button>
-                        </a>
+                        </a> */}
                         <Span sx={{ m: "auto" }}></Span>
                         <Paragraph sx={{ m: 0 }}>
                             Design and Developed by{' '}
-                            <a href="http://ui-lib.com">UI Lib</a>
+                            <a href="https://athletiqo.pro/ru/%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D0%BF%D0%B8%D0%BD%D1%8B-%D1%81-relounge-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BE%D0%B9/">reLounge</a>
                         </Paragraph>
                     </FooterContent>
                 </AppFooter>

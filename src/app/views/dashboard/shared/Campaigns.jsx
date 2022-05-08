@@ -9,25 +9,25 @@ const Campaigns = () => {
 
     return (
         <div>
-            <SimpleCard title="Campaigns">
+            <SimpleCard title="Trainings">
                 <Small sx={{ color: secondary }}>Today</Small>
                 <Box sx={{ pt: 1 }} />
                 <MatxProgressBar
                     value={75}
                     color="primary"
-                    text="Google (102k)"
+                    text="Theresa Webb"
                 />
                 <Box sx={{ py: '4px' }} />
                 <MatxProgressBar
                     value={45}
                     color="secondary"
-                    text="Twitter (40k)"
+                    text="Savannah Nguyen"
                 />
                 <Box sx={{ py: '4px' }} />
                 <MatxProgressBar
                     value={75}
                     color="primary"
-                    text="Tensor (80k)"
+                    text="Marvin McKinney"
                 />
 
                 <Box sx={{ py: '12px' }} />
@@ -36,40 +36,19 @@ const Campaigns = () => {
                 <MatxProgressBar
                     value={75}
                     color="primary"
-                    text="Google (102k)"
+                    text="Cameron Williamson"
                 />
                 <Box sx={{ py: '4px' }} />
                 <MatxProgressBar
                     value={45}
                     color="secondary"
-                    text="Twitter (40k)"
+                    text="Jane Cooper"
                 />
                 <Box sx={{ py: '4px' }} />
                 <MatxProgressBar
                     value={75}
                     color="primary"
-                    text="Tensor (80k)"
-                />
-
-                <Box sx={{ py: '12px' }} />
-                <Small sx={{ color: secondary }}>Yesterday</Small>
-                <Box sx={{ py: '8px' }} />
-                <MatxProgressBar
-                    value={75}
-                    color="primary"
-                    text="Google (102k)"
-                />
-                <Box sx={{ py: '4px' }} />
-                <MatxProgressBar
-                    value={45}
-                    color="secondary"
-                    text="Twitter (40k)"
-                />
-                <Box sx={{ py: '4px' }} />
-                <MatxProgressBar
-                    value={75}
-                    color="primary"
-                    text="Tensor (80k)"
+                    text="Theresa Webb"
                 />
             </SimpleCard>
         </div>
