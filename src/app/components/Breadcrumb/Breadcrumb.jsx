@@ -43,10 +43,10 @@ const Breadcrumb = ({ routeSegments }) => {
         <BreadcrumbRoot>
             {routeSegments ? (
                 <Hidden xsDown>
-                    <BreadcrumbName>
+                    {/* <BreadcrumbName>
                         {routeSegments[routeSegments.length - 1]['name']}
-                    </BreadcrumbName>
-                    <Separator>|</Separator>
+                    </BreadcrumbName> */}
+                    <Separator></Separator>
                 </Hidden>
             ) : null}
             <Breadcrumbs

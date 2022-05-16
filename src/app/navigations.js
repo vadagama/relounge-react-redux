@@ -13,7 +13,7 @@ export const navigations = [
     },
     {
         name: 'Members',
-        path: '/session/404',
+        path: '/members',
         icon: 'people',
                     
     },
@@ -25,7 +25,7 @@ export const navigations = [
     },
     {
         name: 'Acquisition',
-        path: '/session/404',
+        path: '/Acquisitions',
         icon: 'shopping_cart',
                     
     },
