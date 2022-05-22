@@ -13,11 +13,11 @@ import {
 import React, { useState, useEffect } from 'react'
 import { Breadcrumb, SimpleCard } from 'app/components'
 import { Box, styled } from '@mui/system'
+import Avatar from '@mui/material/Avatar';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CreateIcon from '@mui/icons-material/Create';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-import MembersCreate from './MembersCreate';
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Container = styled('div')(({ theme }) => ({
     margin: '30px',
@@ -54,29 +54,23 @@ const StyledTable = styled(Table)(({ theme }) => ({
 
 const membersList = [
     {
-        name: 'john doe',
-        next_recheck: '22 july, 2022',
-        trainings: '4 / 10',
-        well_being: 'good',
-        company: 'BBR GMBH',
+        avatar: 'https://cdn.pixabay.com/photo/2021/05/04/13/29/portrait-6228705_1280.jpg',
+        name: 'John Doe',
+        competences: ['Trainer', 'Consultant', 'Sales'],
     },
     {
-        name: 'kessy bryan',
-        next_recheck: '05 july, 2022',
-        trainings: '6 / 10',
-        well_being: 'bad',
-        company: 'AVK GmbH',
+        avatar: 'https://blog.photofeeler.com/wp-content/uploads/2017/12/linkedin-profile-picture.jpg',
+        name: 'Kessy Bryan',
+        competences: ['Sales'],
     },
     {
-        name: 'nikita minin',
-        next_recheck: '12 july, 2022',
-        trainings: '2 / 10',
-        well_being: 'average',
-        company: 'AVK GmbH',
+        avatar: 'https://cdn.pixabay.com/photo/2021/05/20/11/58/beauty-6268460_1280.jpg',
+        name: 'Nikа Mininа',
+        competences: ['Trainer'],
     }
 ]
 
-const MembersList = () => {
+const StaffList = () => {
     const [rowsPerPage, setRowsPerPage] = React.useState(5)
     const [page, setPage] = React.useState(0)
 
@@ -100,9 +94,9 @@ const MembersList = () => {
                     />
                 </div>
                 <div>
-                <Link to="/members/create">
+                <Link to="/employees/create">
                     <Button variant="contained" startIcon={<AddCircleIcon />}>
-                        Add a member
+                        Add an employee
                     </Button>
                 </Link>
                 </div>
@@ -113,11 +107,9 @@ const MembersList = () => {
             <StyledTable>
                 <TableHead>
                     <TableRow>
+                        <TableCell  style={{ width: 80 }}></TableCell>
                         <TableCell>Name</TableCell>
-                        <TableCell>Company</TableCell>
-                        <TableCell>Trainings</TableCell>
-                        <TableCell>Next Recheck</TableCell>
-                        <TableCell>Well-being</TableCell>
+                        <TableCell>Competences</TableCell>
                         <TableCell>Action</TableCell>
                     </TableRow>
                 </TableHead>
@@ -130,16 +122,16 @@ const MembersList = () => {
                         .map((member, index) => (
                             <TableRow key={index}>
                                 <TableCell align="left">
+                                <Avatar alt="Remy Sharp" src={member.avatar} />
+                                 </TableCell>
+                                <TableCell align="left">
                                     {member.name}
                                  </TableCell>
                                 <TableCell align="left">
-                                    {member.company}
+                                {member.competences.map((competence) => (
+                                    <div>{competence}</div>
+                                ))}
                                 </TableCell>
-                                <TableCell>{member.trainings}</TableCell>
-                                <TableCell align="left">
-                                    {member.next_recheck}
-                                </TableCell>
-                                <TableCell>{member.well_being}</TableCell>
                                 <TableCell>
                                 <IconButton>
                                     <Tooltip title="Edit">
@@ -156,23 +148,6 @@ const MembersList = () => {
                         ))}
                 </TableBody>
             </StyledTable>
-
-            {/* <TablePagination
-                sx={{ px: 2 }}
-                rowsPerPageOptions={[5, 10, 25]}
-                component="div"
-                count={subscribarList.length}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                backIconButtonProps={{
-                    'aria-label': 'Previous Page',
-                }}
-                nextIconButtonProps={{
-                    'aria-label': 'Next Page',
-                }}
-                onPageChange={handleChangePage}
-                onRowsPerPageChange={handleChangeRowsPerPage}
-            /> */}
         </Box>
                 </ SimpleCard>
             </ Container>
@@ -180,4 +155,4 @@ const MembersList = () => {
     )
 }
 
-export default MembersList
+export default StaffList

@@ -16,7 +16,7 @@ import { Box, styled } from '@mui/system'
 import DeleteIcon from '@mui/icons-material/Delete';
 import CreateIcon from '@mui/icons-material/Create';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-import MembersCreate from './MembersCreate';
+import LocationsCreate from './LocationsCreate';
 import { Link, useHistory } from 'react-router-dom'
 
 const Container = styled('div')(({ theme }) => ({
@@ -52,31 +52,31 @@ const StyledTable = styled(Table)(({ theme }) => ({
     },
 }))
 
-const membersList = [
+const Locations = [
     {
-        name: 'john doe',
-        next_recheck: '22 july, 2022',
-        trainings: '4 / 10',
-        well_being: 'good',
-        company: 'BBR GMBH',
+        name: 'New York Fitness',
+        address: 'Cologne, Sweitz st. 23',
+        number_of_employees: 3,
+        number_of_devices: 4,
+        number_of_members: 200
     },
     {
-        name: 'kessy bryan',
-        next_recheck: '05 july, 2022',
-        trainings: '6 / 10',
-        well_being: 'bad',
-        company: 'AVK GmbH',
+        name: 'California Fitness',
+        address: 'Cologne, Sweitz st. 23',
+        number_of_employees: 1,
+        number_of_devices: 2,
+        number_of_members: 50
     },
     {
-        name: 'nikita minin',
-        next_recheck: '12 july, 2022',
-        trainings: '2 / 10',
-        well_being: 'average',
-        company: 'AVK GmbH',
+        name: 'Washington Fitness',
+        address: 'Cologne, Sweitz st. 23',
+        number_of_employees: 4,
+        number_of_devices: 12,
+        number_of_members: 980
     }
 ]
 
-const MembersList = () => {
+const LocationsList = () => {
     const [rowsPerPage, setRowsPerPage] = React.useState(5)
     const [page, setPage] = React.useState(0)
 
@@ -95,51 +95,55 @@ const MembersList = () => {
                 <div className="breadcrumb">
                     <Breadcrumb
                         routeSegments={[
-                            { name: 'Members', path: '/members' },
+                            { name: 'Locations', path: '/locations' },
                         ]}
                     />
                 </div>
                 <div>
-                <Link to="/members/create">
+                <Link to="/locations/create">
                     <Button variant="contained" startIcon={<AddCircleIcon />}>
-                        Add a member
+                        Add a location
                     </Button>
                 </Link>
                 </div>
             <Box sx={{ py: '6px' }} />
-                <SimpleCard title="Members">
+                <SimpleCard title="Locations">
             <Box width="100%" overflow="auto">
             
             <StyledTable>
                 <TableHead>
                     <TableRow>
-                        <TableCell>Name</TableCell>
-                        <TableCell>Company</TableCell>
-                        <TableCell>Trainings</TableCell>
-                        <TableCell>Next Recheck</TableCell>
-                        <TableCell>Well-being</TableCell>
+                        <TableCell>Location name</TableCell>
+                        <TableCell>Address</TableCell>
+                        <TableCell>Employees</TableCell>
+                        <TableCell>Devices</TableCell>
+                        <TableCell>Members</TableCell>
                         <TableCell>Action</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {membersList
+                    {Locations
                         .slice(
                             page * rowsPerPage,
                             page * rowsPerPage + rowsPerPage
                         )
-                        .map((member, index) => (
+                        .map((location, index) => (
                             <TableRow key={index}>
                                 <TableCell align="left">
-                                    {member.name}
+                                    <Link to='/locations/create/'>
+                                        {location.name}
+                                    </Link>
                                  </TableCell>
-                                <TableCell align="left">
-                                    {member.company}
+                                 <TableCell align="left">
+                                    {location.address}
                                 </TableCell>
-                                <TableCell>{member.trainings}</TableCell>
                                 <TableCell align="left">
-                                    {member.next_recheck}
+                                    {location.number_of_employees}
                                 </TableCell>
-                                <TableCell>{member.well_being}</TableCell>
+                                <TableCell>{location.number_of_devices}</TableCell>
+                                <TableCell align="left">
+                                    {location.number_of_members}
+                                </TableCell>
                                 <TableCell>
                                 <IconButton>
                                     <Tooltip title="Edit">
@@ -180,4 +184,4 @@ const MembersList = () => {
     )
 }
 
-export default MembersList
+export default LocationsList

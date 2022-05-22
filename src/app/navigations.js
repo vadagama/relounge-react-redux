@@ -7,7 +7,7 @@ export const navigations = [
     
     {
         name: 'Appointments',
-        path: '/session/404',
+        path: '/appointments',
         icon: 'assignment',
                     
     },
@@ -18,38 +18,50 @@ export const navigations = [
                     
     },
     {
-        name: 'Finance',
-        path: '/session/404',
+        name: 'Finances',
+        path: '/finances',
         icon: 'account_balance',
                     
     },
     {
-        name: 'Acquisition',
-        path: '/Acquisitions',
-        icon: 'shopping_cart',
+        name: 'Products',
+        path: '/products',
+        icon: 'discount',
                     
     },
+    // {
+    //     name: 'Acquisition',
+    //     path: '/Acquisitions',
+    //     icon: 'shopping_cart',
+                    
+    // },
     {
         name: 'Staff',
-        path: '/session/404',
+        path: '/employees',
         icon: 'admin_panel_settings',
                     
     },
-    {
-        name: 'Analytics',
-        path: '/session/404',
-        icon: 'equalizer',
+    // {
+    //     name: 'Analytics',
+    //     path: '/session/404',
+    //     icon: 'equalizer',
                     
-    },
+    // },
+    // {
+    //     name: 'Communication',
+    //     path: '/session/404',
+    //     icon: 'chat',
+                    
+    // },
     {
-        name: 'Communication',
-        path: '/session/404',
-        icon: 'chat',
+        name: 'Locations',
+        path: '/locations',
+        icon: 'maps_home_work',
                     
     },
     {
         name: 'Settings',
-        path: '/session/404',
+        path: '/settings',
         icon: 'settings',
                     
     },

@@ -5,6 +5,10 @@ import dashboardRoutes from './views/dashboard/DashboardRoutes'
 import materialRoutes from './views/material-kit/MaterialRoutes'
 import membersRoutes from './views/members/MembersRoutes'
 import AcquisitionsRoutes from './views/acquisition/AcquisitionsRoutes'
+import SettingsRoutes from './views/settings/SettingsRoutes'
+import AppointmentsRoutes from './views/appointments/AppointmentsRoutes'
+import ProductsRoutes from './views/products/ProductsRoutes'
+import FinancesRoutes from './views/finances/FinancesRoutes'
 
 const redirectRoute = [
     {
@@ -27,7 +31,11 @@ const routes = [
     ...redirectRoute,
     ...errorRoute,
     ...membersRoutes,
-    ...AcquisitionsRoutes
+    ...AcquisitionsRoutes,
+    ...AppointmentsRoutes,
+    ...SettingsRoutes,
+    ...ProductsRoutes,
+    ...FinancesRoutes,
 ]
 
 export default routes

@@ -14,11 +14,11 @@ const BreadcrumbName = styled('h4')(() => ({
     fontSize: '16px',
     paddingBottom: '1px',
     verticalAlign: 'middle',
-    textTransform: 'capitalize',
+    // textTransform: 'capitalize',
 }))
 
 const SubName = styled('span')(({ theme }) => ({
-    textTransform: 'capitalize',
+    // textTransform: 'capitalize',
     color: theme.palette.text.secondary,
 }))
 
